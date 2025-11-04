@@ -1,42 +1,32 @@
-package Exercicio1;
+package exercicio1;
 
 public class Livro {
-    private static int qtdLivros = 0;
 
-    private int id;
     private String titulo;
     private String autor;
     private double preco;
 
     Livro(String titulo) {
-        setId();
         this.titulo = titulo;
     }
 
     Livro(String titulo, String autor) {
-        setId();
         this.titulo = titulo;
         this.autor = autor;
     }
 
     Livro(String titulo, double preco) throws PrecoNegativoException {
-        setId();
         this.titulo = titulo;
         this.setPreco(preco);
     }
 
     Livro(String titulo, String autor, double preco) throws PrecoNegativoException {
-        setId();
         this.titulo = titulo;
         this.autor = autor;
         this.setPreco(preco);
     }
 
     // Getters
-    public int getId() {
-        return id;
-    }
-
     public String getTitulo() {
         return titulo;
     }
@@ -50,11 +40,6 @@ public class Livro {
     }
 
     // Setters
-    private void setId() {
-        int id = ++qtdLivros;
-        this.id = id;
-    }
-
     public void setTitulo(String titulo) {
         this.titulo = titulo;
     }
@@ -70,5 +55,13 @@ public class Livro {
         }
 
         this.preco = preco;
+    }
+
+    @Override
+    public String toString() {
+        return "Informações do livro" +
+               "\nTítulo: " + titulo +
+               "\nAutor: " + autor +
+               "\nPreço: " + preco;
     }
 }

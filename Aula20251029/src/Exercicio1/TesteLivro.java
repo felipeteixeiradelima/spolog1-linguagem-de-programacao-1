@@ -1,4 +1,4 @@
-package Exercicio1;
+package exercicio1;
 
 public class TesteLivro {
     public static void main(String[] args) {
@@ -24,18 +24,7 @@ public class TesteLivro {
         }
 
         for (Livro livro : livros) {
-            System.out.printf("""
-                    =======================================================
-
-                            Informações do livro %d:
-                    
-                            Título: %s
-                            Autor: %s
-                            Preço: R$%.2f
-
-                    =======================================================
-                    """, livro.getId(), livro.getTitulo(), livro.getAutor(), livro.getPreco());
-
+            System.out.println("\n" + livro);
         }
     }
 }
